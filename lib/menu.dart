@@ -55,9 +55,9 @@ class MyHomePage extends StatelessWidget {
     }
 
     final List<ItemHomepage> items = [
-    ItemHomepage("All Products", Icons.storefront),
-    ItemHomepage("My Products", Icons.inventory),
-    ItemHomepage("Create Product", Icons.add_circle),
+    ItemHomepage("All Products", Icons.storefront, Colors.blue),
+    ItemHomepage("My Products", Icons.inventory, Colors.green),
+    ItemHomepage("Create Product", Icons.add_circle, Colors.red),
   ];
 }
 
@@ -65,8 +65,9 @@ class MyHomePage extends StatelessWidget {
 class ItemHomepage {
   final String name;
   final IconData icon;
+  final Color color;
 
-  ItemHomepage(this.name, this.icon);
+  ItemHomepage(this.name, this.icon, this.color);
 }
 
 class ItemCard extends StatelessWidget {
@@ -80,7 +81,7 @@ class ItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       // Menentukan warna latar belakang dari tema aplikasi.
-      color: Theme.of(context).colorScheme.secondary,
+      color: item.color,
       // Membuat sudut kartu melengkung.
       borderRadius: BorderRadius.circular(12),
 
