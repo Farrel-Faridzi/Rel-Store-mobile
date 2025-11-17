@@ -2,8 +2,6 @@
 
 ---
 
-Tentu, berikut adalah ringkasan dari empat poin tersebut:
-
 ### 1. `Navigator.push` vs `pushReplacement`
 
 * **`push` (Dorong):** Menumpuk halaman baru **di atas** halaman lama. Pengguna bisa menekan "kembali" untuk kembali ke halaman lama.
